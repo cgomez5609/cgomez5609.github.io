@@ -1,3 +1,4 @@
+/* MAIN PROPERTIES FOR ENTIRE PAGE */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ section {
   margin-bottom: 20px;
 }
 
+/* PROPERTIES FOR CONTAINERS */
 #left-container {
   background-color: #0D0D0D;
   padding: 5px;
@@ -23,7 +25,6 @@ section {
 }
 
 #right-container {
-  /* background-color: #030303; */
   width: 100%;
   height: auto;
   margin-left: -30px;
@@ -44,22 +45,23 @@ section {
   margin-left: 10%;
 }
 
-
-#one {
+/* IMAGE CONTAINER PROPERTIES  */
+#topLeftImage {
   -webkit-clip-path: polygon(0 0, 58% 0, 30% 100%, 0 100%);
   clip-path: polygon(0 0, 58% 0, 30% 100%, 0 100%);
 }
 
-#two {
+#middleImage {
   -webkit-clip-path: polygon(79% 0, 48% 0, 24% 100%, 55% 100%);
   clip-path: polygon(79% 0, 38% 0, 14% 100%, 55% 100%);
 }
 
-#three {
+#bottomRightImage {
   -webkit-clip-path: polygon(79% 0, 100% 0, 100% 100%, 55% 100%);
   clip-path: polygon(62% 0, 100% 0, 100% 100%, 35% 100%);
 }
 
+/* IMAGE PROPERTIES */
 img {
   max-width: 100%;
   /* max-height: 80%; */

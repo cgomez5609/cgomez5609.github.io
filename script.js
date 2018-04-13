@@ -1,29 +1,31 @@
 var onHoverText = document.getElementsByClassName("onHoverText")[0];
-var programmingHover = document.getElementById("one");
-var controllerHover = document.getElementById("two");
-var concertHover = document.getElementById("three");
+var keyboardImage = document.getElementById("topLeftImage");
+var controllerImage = document.getElementById("middleImage");
+var concertImage = document.getElementById("bottomRightImage");
 
-var elements = ["one", "two", "three"];
+var images = ["topLeftImage", "middleImage", "bottomRightImage"];
 
 var breakLine = "<br>"
 
-programmingHover.addEventListener("mouseover", function() {
-    console.log("I am over the picture");
-    onHoverText.innerHTML = "Languages I use:" + "<br>" +
-                            "<b style='color: green'>PYTHON</b> was my first language" + "<br>" +
-                            "I would use <b style='color:blue'>SWIFT</b> for everything if can" + "<br>" +
-                            "<b style='color: teal'>C#</b> makes Unity fun" + "<br>" +
+// Adds text to the right container when hovering over an image.
+// Three images total with three different possible texts.
+keyboardImage.addEventListener("mouseover", function() {
+    console.log("I am over the image");
+    onHoverText.innerHTML = "Languages I use:" + breakLine +
+                            "<b style='color: green'>PYTHON</b> was my first language" + breakLine +
+                            "I would use <b style='color:blue'>SWIFT</b> for everything if can" + breakLine +
+                            "<b style='color: teal'>C#</b> makes Unity fun" + breakLine+
                             "<b style='color:purple'>JAVASCRIPT</b> is everywhere" +
-                            "<br>" + "<br>" +
-                            "What I\'m into:" + "<br>" +
-                            "Web Development" + "<br>" +
-                            "Game Development" + "<br>" +
-                            "ios development" + "<br>" +
+                            breakLine + breakLine +
+                            "What I\'m into:" + breakLine +
+                            "Web Development" + breakLine +
+                            "Game Development" + breakLine +
+                            "ios development" + breakLine +
                             "Artificial Intelligence";
 })
 
-controllerHover.addEventListener("mouseover", function() {
-    console.log("I am over the picture");
+controllerImage.addEventListener("mouseover", function() {
+    console.log("I am over the image");
     onHoverText.innerHTML = "I grew up with games so I'll grow old with them as well" + "<br>" +
                             breakLine +
                             "What do I play on" + breakLine +
@@ -41,7 +43,8 @@ controllerHover.addEventListener("mouseover", function() {
                             "Honestly, anything with a <b style='color: teal'>good story</b>";
 })
 
-concertHover.addEventListener("mouseover", function() {
+concertImage.addEventListener("mouseover", function() {
+  console.log("I am over the image");
   onHoverText.innerHTML = "Genres I enjoy:" + breakLine +
                           "Classical" + breakLine +
                           "Soundtracks" + breakLine +
@@ -59,9 +62,11 @@ concertHover.addEventListener("mouseover", function() {
 
 })
 
-for (var i = 0; i < elements.length; i++) {
+// Removes text from right container when no longer hovering over image
+// loops through each image via the "images" variable in order to shorten code
+for (var i = 0; i < images.length; i++) {
   document.getElementById(elements[i]).addEventListener("mouseleave", function() {
-      console.log("I am out of the picture")
+      console.log("I am out of the image")
       onHoverText.innerHTML = "";
   })
 }
